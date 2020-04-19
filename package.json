@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports",
-    "test": "test:unit"
+    "test": "jest",
+    "test:watch": "jest --coverage --watchAll"
   },
   "author": "Vágner Oliveira",
   "license": "ISC",
@@ -18,11 +19,14 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.3.0",
     "nodemon": "^2.0.3",
     "sucrase": "^3.13.0",
+    "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "cors": "^2.8.5",
     "express": "^4.17.1"
   }
